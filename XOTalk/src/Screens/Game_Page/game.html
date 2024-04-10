@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Roboto+Mono:ital,wght@0,400;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="gamestyle.css" />
+    <link rel="icon" type="icon/png" href="/assets/iconcursor.ico">
+    <title>XOTalk</title>
+  </head>
+  <body>
+    <h1 id="text">Tic Tac Toe Game</h1>
+      <span>
+        <iframe id="huddle01-iframe" src="https://app.huddle01.com/ugu-gcgd-zjd" name="myiFrame" scrolling="no"
+            height="50%" width="30%" allowfullscreen
+            allow="camera; microphone; clipboard-read; clipboard-write; display-capture"></iframe>
+        <div class="board" id="board">
+          <div class="cell" data-cell></div>
+          <div class="cell" data-cell></div>
+          <div class="cell" data-cell></div>
+          <div class="cell" data-cell></div>
+          <div class="cell" data-cell></div>
+          <div class="cell" data-cell></div>
+          <div class="cell" data-cell></div>
+          <div class="cell" data-cell></div>
+          <div class="cell" data-cell></div>
+        </div>
+        <iframe id="huddle01-iframe" src="https://app.huddle01.com/ugu-gcgd-zjd" name="myiFrame" scrolling="no"
+            height="50%" width="30%" allowfullscreen
+            allow="camera; microphone; clipboard-read; clipboard-write; display-capture"></iframe>
+      </span>
+    <div class="winning-message" id="winningMessage">
+      <div data-winning-message-text></div>
+      <button id="restartButton">Restart</button>
+    </div>
+  <script src="https://unpkg.com/@huddle01/web-core@latest/dist/index.js" />
+<script type="module">
+  huddleClient.initialize("YOUR_PROJECT_ID");
+  huddleClient.joinLobby("YOUR_ROOM_ID");
+</script>
+  <script src="gamescript.js" defer></script>
+
+  <script>
+    huddleClient.initialize('8NQbw-Ds5xZ4TVJMfBDWm7U00qC7pDWv');
+    document.getElementById('joinLobby').onclick = () => {
+      huddleClient.joinLobby('YOUR_ROOM_ID');
+    };
+    document.getElementById('joinRoom').onclick = () => {
+      huddleClient.joinRoom();
+    };
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="https://unpkg.com/@huddle01/web-core@umd/dist/index.global.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #EAF2FF;
+    height: 100vh;
+  }
+  
+  .container {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  .cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card i{
+    font-size:30px;
+    padding: 20px;
+    aspect-ratio: 1;
+    border: 5px solid black;
+  }
+  .card {
+    background-image: linear-gradient(-135deg, #fff,#aaf);
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    height: 500px;
+    width: 30vw;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: transform 0.3s ease;
+    box-shadow: 0px 0px 0px 1px #1b0bff;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 10px 1px #1b0bff;
+  }
+  select{width:70%;height:10%;border-radius: 30px;font-size: 20px;padding:5px;background-color: #1b0bce;color: #fff;}
+  button {
+    padding: 10px 80px;
+    border-radius: 30px;
+    font-size: 1.3em;
+    min-width: 80%;
+    background-color: #1b0bce;
+    border-bottom: 10px solid #0b0b6f;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-wrap: nowrap;
+  }
+  .card button{padding: 10px 20px;border-radius: 20px;}
+  
+  button:hover {
+    background-color: #0f0f6f;
+    border-bottom: 0px;
+  }
+  @media screen and (max-width: 480px){
+    button{text-wrap: wrap;font-size: 100%;}
+  }

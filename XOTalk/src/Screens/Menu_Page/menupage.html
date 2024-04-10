@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>XOTalk</title>
+  <link rel="stylesheet" href="menustyle.css">
+  <link rel="icon" type="icon/png" href="/assets/iconcursor.ico">
+</head>
+<body>
+  <div class="container">
+    <div class="cards-container">
+      <div class="card">
+        <h2>Create Game</h2>
+        <div id="player-profile"><i class="fa-solid fa-user"></i></div>
+        <p>Challenge your friends</p>
+        <a href="/src/Screens/Game_Page/game.html"><button id="play-btn" >Host Room</button></a>
+        <a href="/src/Screens/Game_Page/game.html"><button id="play-btn" >Join Room</button></a>
+      </div>
+      <div class="card">
+        <h2>Choose your game</h2>
+        <select name="game" id="">
+          <option value="">Tic tac toe</option>
+          <option value="">Othello</option>
+          <option value="">Ludo</option>
+        </select>
+      </div>
+      <div class="card">
+        <h2>Leader Board</h2>
+        <i class="fa-solid fa-trophy"></i>
+        <button>Check your rank</button>
+      </div>
+    </div>
+      <button id="connect-btn" onclick="web3MetaOpen()">Connect your Wallet<i class="fa-solid fa-wallet"></i></button>
+      <button id="settings-btn">Settings <i class="fa-solid fa-gear"></i></button>
+  </div>
+
+  <script>
+    function web3MetaOpen(){
+        ethereum.request({
+            method:'eth_requestAccounts',
+
+
+        }).then(result=>{
+            console.log();
+        });
+    }
+</script>
+
+</body>
+</html>
